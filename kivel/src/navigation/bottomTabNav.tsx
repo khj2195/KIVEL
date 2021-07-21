@@ -25,7 +25,14 @@ export default function bottomTabNav() {
 			sceneAnimationEnabled={false}
 			activeColor="#e91e63"
 			inactiveColor="#95a5a6"
-			barStyle={{  }}
+			barStyle={{       
+				backgroundColor: 'black',
+				position: 'absolute',
+				overflow: 'hidden',
+				borderTopLeftRadius: 30,
+				borderTopRightRadius: 30,
+				height : '10%'
+			}}
 		>
 			<Tab.Screen name="Home" component={homeScreen} 
 				options={{
