@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">kivel</string>
+    <string name="kakao_app_key">b0513437a0401404b904aecf72a5e0dd</string>
 </resources>
