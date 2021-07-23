@@ -5,7 +5,7 @@ import 'react-native-gesture-handler';
 
 import { enableScreens } from 'react-native-screens'
 import { Provider } from 'react-redux'
-import { store } from './src/redux/store'
+import { store } from './src/redux/store/store'
 
 
 
