@@ -2,55 +2,43 @@ import React from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native'
 import { ApplicationState, kakaoLogin } from '../../redux/store';  
 import { useSelector, useDispatch } from 'react-redux';
+import Modal from '../../components/common/modal'
 
 export default function homeScreen() {
 
     
     const {user, error} = useSelector((state : ApplicationState) => state.userReducer);
     console.log('home : ', user)
+    
+    const [modalVisible, setModalVisible] = React.useState(false);
+    const onStart = () => {
+        setModalVisible(true);
+    };
 
     return (
         
         <View style={{ flex : 1, backgroundColor : 'white'}}>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
-            <Text>This is homeScreen</Text>
+            <Button title='아시부레' onPress={() => onStart()}></Button>
+            <Modal
+                modalVisible = {modalVisible}
+                setModalVisible = {setModalVisible}
+            >
+                <View style={{backgroundColor : 'white', borderRadius : 15,}}>
+                <Text>asldj alskd</Text>
+                <Text>asldj alskd</Text>
+                <Text>asldj alskd</Text>
+                <Text>asldj alskd</Text>
+                <Text>asldj alskd</Text>
+                <Text>asldj alskd</Text>
+                <Text>asldj alskd</Text>
+                <Text>asldj alskd</Text>
+                <Text>asldj alskd</Text>
+
+                    <Button title ="우에에ㅔㅇㄱ" onPress= {() => {setModalVisible(false)}}></Button>
+                </View>
+                
+            </Modal>
+            
         </View>
     )
 }
