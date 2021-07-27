@@ -36,7 +36,7 @@ const calendar: React.FC = () => {
     }, 1000);
   };
 
-  const renderItem = (item) => {
+  const renderItem = (item : any) => {
     return (
       <TouchableOpacity style={{marginRight: 10, marginTop: 17}}>
         <Card>
