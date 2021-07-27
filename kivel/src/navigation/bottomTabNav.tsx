@@ -5,6 +5,7 @@ import { StyleSheet, Text, View, Dimensions, Image } from 'react-native';
 import { DarkTheme } from '@react-navigation/native';
 import homeScreen from '../screen/home/homeScreen';
 import settingScreen from '../screen/home/settingScreen';
+import calendar from '../screen/myPage/calendar';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -59,7 +60,7 @@ export default function bottomTabNav() {
 									</View>
 								)
 							}}/>
-			<Tab.Screen name="Home3" component={homeScreen} 
+			<Tab.Screen name="Home3" component={calendar} 
 				options={{
 					tabBarIcon : ({focused}) => (
 						<View style={{alignItems : 'center', justifyContent : 'center',}}>
