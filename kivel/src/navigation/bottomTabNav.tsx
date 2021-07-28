@@ -6,6 +6,7 @@ import { DarkTheme } from '@react-navigation/native';
 import homeScreen from '../screen/home/homeScreen';
 import settingScreen from '../screen/home/settingScreen';
 import calendar from '../screen/myPage/calendar';
+import { HomeAnimation } from '../components/common/homeAnimation';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -27,7 +28,7 @@ export default function bottomTabNav() {
 			activeColor="#e91e63"
 			inactiveColor="#95a5a6"
 			barStyle={{       
-				backgroundColor: 'black',
+				backgroundColor: 'white',
 				position: 'absolute',
 				overflow: 'hidden',
 				borderTopLeftRadius: 30,
@@ -39,11 +40,13 @@ export default function bottomTabNav() {
 				options={{
 					tabBarIcon : ({focused}) => (
 						<View style={{alignItems : 'center', justifyContent : 'center',}}>
-							<Image
+							{/* <Image
 								source={require('../assets/icons/home.png')}
 								resizeMode='contain'
 								style={{width : 25, height : 25, tintColor : focused ? '#e32f45' : '#748c94'}}
-							/>	
+							/>	 */}
+							{console.log("Tabnav : ", focused)}
+							<HomeAnimation autoplay = {focused} ></HomeAnimation>
 						</View>
 					)
 				}}
