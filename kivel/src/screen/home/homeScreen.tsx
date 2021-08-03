@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button } from 'react-native'
+import { StyleSheet, Text, View, Button, ActivityIndicator } from 'react-native'
 import { ApplicationState, kakaoLogin } from '../../redux/store';  
 import { useSelector, useDispatch } from 'react-redux';
 import Modal from '../../components/common/modal'
@@ -19,10 +19,12 @@ export default function homeScreen() {
         
         <View style={{ flex : 1, backgroundColor : 'white'}}>
             <Button title='아시부레' onPress={() => onStart()}></Button>
+            <ActivityIndicator size="large" color="#123456" ></ActivityIndicator>
             <Modal
                 modalVisible = {modalVisible}
                 setModalVisible = {setModalVisible}
             >
+                
                 <View style={{backgroundColor : 'white', borderRadius : 15,}}>
                 <Text>asldj alskd</Text>
                 <Text>asldj alskd</Text>
