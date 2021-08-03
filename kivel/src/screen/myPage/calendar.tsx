@@ -4,10 +4,7 @@ import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
 import {Card, Avatar} from 'react-native-paper';
 // import Typography from '../components/Typography';
 
-const timeToString = (time: any) => {
-  const date = new Date(time);
-  return date.toISOString().split('T')[0];
-};
+
 
 const calendar: React.FC = () => {
   const [items, setItems] = useState({});

@@ -7,7 +7,10 @@ import homeScreen from '../screen/home/homeScreen';
 import settingScreen from '../screen/home/settingScreen';
 import calendar from '../screen/myPage/calendar';
 import { HomeAnimation } from '../components/common/homeAnimation';
+<<<<<<< HEAD
 import shareExample from '../screen/test/ShareExample';
+=======
+>>>>>>> 90c4ba6fcfdb11a8c6eac60a6c3568b73936d814
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
