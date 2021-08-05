@@ -22,8 +22,8 @@ export const kakaoLogin = () =>{
             .then(() => getProfile()
                         .then((profile) => {
                             dispatch({ 
-                            type : 'LOGIN',
-                            payload : {nickName : profile.nickname}
+                                type : 'LOGIN',
+                                payload : {nickName : profile.nickname}
                             })
                         })
                         .catch(error => {
